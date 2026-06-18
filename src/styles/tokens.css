@@ -1,0 +1,65 @@
+:root {
+  /* Harmonious Dark Palette */
+  --bg-primary: hsl(240, 10%, 4%);
+  --bg-secondary: hsl(240, 8%, 8%);
+  --bg-tertiary: hsl(240, 6%, 12%);
+  --border-color: hsla(240, 5%, 20%, 0.45);
+  
+  --text-primary: hsl(0, 0%, 94%);
+  --text-secondary: hsl(240, 4%, 65%);
+  --text-muted: hsl(240, 4%, 45%);
+  
+  --accent-blue: hsl(206, 90%, 48%);
+  --accent-blue-glow: hsla(206, 90%, 48%, 0.3);
+  --accent-yellow: hsl(42, 95%, 53%);
+  --accent-yellow-glow: hsla(42, 95%, 53%, 0.25);
+  --accent-red: hsl(0, 80%, 48%);
+  --accent-red-glow: hsla(0, 80%, 48%, 0.25);
+
+  /* Typography Scales */
+  --font-serif: "Cinzel", "Playfair Display", "Georgia", serif;
+  --font-sans: "Space Grotesk", "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-gothic: "UnifrakturMaguntia", "Gothic", "Old English Text MT", serif;
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line Heights */
+  --lh-tight: 1.05;
+  --lh-heading: 1.15;
+  --lh-body: 1.6;
+
+  /* Tracking (Letter-Spacing) */
+  --track-tighter: -0.03em;
+  --track-tight: -0.015em;
+  --track-normal: 0em;
+  --track-wide: 0.05em;
+  --track-wider: 0.1em;
+  --track-widest: 0.18em;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4.5rem;
+  --space-xxl: 9rem;
+
+  /* Animations & Transitions */
+  --ease-primary: cubic-bezier(0.16, 1, 0.3, 1); /* Custom OutExpo */
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.43, 0.13, 0.23, 0.96);
+  --transition-fast: 0.2s var(--ease-primary);
+  --transition-medium: 0.45s var(--ease-primary);
+  --transition-slow: 0.9s var(--ease-primary);
+  
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}

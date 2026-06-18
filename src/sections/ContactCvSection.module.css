@@ -1,0 +1,240 @@
+.contactCvSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-primary);
+  padding: var(--space-xxl) 0 var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl);
+}
+
+/* CV Grid design blueprint */
+.cvGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+  .cvGrid {
+    grid-template-columns: 1fr;
+    border-left: none;
+    border-top: none;
+  }
+}
+
+.gridBox {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .gridBox {
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+.skillsSection {
+  margin-top: var(--space-lg);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-md);
+}
+
+.historyItem {
+  margin-top: var(--space-md);
+}
+
+.date {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: var(--weight-bold);
+  color: var(--accent-blue);
+  background-color: var(--accent-blue-glow);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* Software bars styling */
+.softwareList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.softItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.softInfo {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+}
+
+.softName {
+  color: var(--text-primary);
+  font-weight: var(--weight-medium);
+}
+
+.softLevel {
+  color: var(--text-muted);
+}
+
+.progressTrack {
+  width: 100%;
+  height: 4px;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--accent-blue);
+  border-radius: var(--radius-full);
+}
+
+.cvDecoration {
+  margin-top: auto;
+  padding-top: var(--space-lg);
+  display: flex;
+  justify-content: center;
+  opacity: 0.05;
+  filter: invert(1);
+}
+
+.decoImage {
+  width: 80%;
+  height: auto;
+}
+
+/* Contact Block styling */
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-xxl);
+}
+
+.contactHeader {
+  text-align: center;
+}
+
+.linksRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .linksRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+.contactCard {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contactCard:hover {
+  border-color: var(--accent-blue);
+  background-color: var(--bg-tertiary);
+  transform: translateY(-2px);
+}
+
+.contactIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.contactCard:hover .contactIcon {
+  background-color: var(--accent-blue);
+  color: #fff;
+  border-color: var(--accent-blue);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contactValue {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: var(--weight-medium);
+  margin-top: 2px;
+}
+
+.copyBtn, .arrowIcon {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: var(--space-xs);
+  transition: color var(--transition-fast);
+}
+
+.contactCard:hover .copyBtn,
+.contactCard:hover .arrowIcon {
+  color: var(--text-primary);
+}
+
+/* Footer styling */
+.footerRow {
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .footerRow {
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+}

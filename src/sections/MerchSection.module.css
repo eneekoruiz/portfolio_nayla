@@ -1,0 +1,135 @@
+.merchSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-primary);
+  padding: var(--space-xxl) 0;
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.quoteWrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto var(--space-xxl);
+}
+
+.gothicQuote {
+  color: var(--accent-red);
+  text-shadow: 0 0 40px rgba(180, 0, 0, 0.15);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.quoteLabel {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: var(--space-xxl);
+  }
+}
+
+.introCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 500px;
+}
+
+.frontPause {
+  border-left: 2px solid var(--accent-blue);
+  padding-left: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.showcaseCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+@media (max-width: 600px) {
+  .showcaseCol {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.shirtCardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.magnifierContainer {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-md);
+  cursor: zoom-in;
+}
+
+.shirtCard {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+.shirtImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.02) brightness(0.95);
+  transition: filter var(--transition-medium);
+}
+
+.magnifierContainer:hover .shirtImg {
+  filter: contrast(1.05) brightness(1.01);
+}
+
+/* Mouse-following magnifying glass circle lens */
+.magnifierLens {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+  pointer-events: none;
+  background-repeat: no-repeat;
+  /* Centered over the mouse position */
+  transform: translate(-50%, -50%);
+  left: var(--mouse-x, 0px);
+  top: var(--mouse-y, 0px);
+  /* Scaling the background image to 230% width for zoom */
+  background-size: 230% auto;
+  background-position: var(--mouse-xp, 50%) var(--mouse-yp, 50%);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .magnifierLens {
+    display: none; /* Disable magnifier on touch screens for responsiveness */
+  }
+}

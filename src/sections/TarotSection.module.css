@@ -1,0 +1,242 @@
+.tarotSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-primary);
+  padding: var(--space-xxl) var(--space-md);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.quoteWrapper {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-lg);
+}
+
+.gridWrapper {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .gridWrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.introCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 500px;
+}
+
+.sectionTitle {
+  color: var(--text-primary);
+  margin-top: var(--space-xs);
+}
+
+.helperText {
+  margin-top: var(--space-lg);
+  font-size: 0.7rem;
+  color: var(--accent-blue);
+  text-shadow: 0 0 5px var(--accent-blue-glow);
+}
+
+.deckCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding: var(--space-md);
+}
+
+@media (max-width: 600px) {
+  .deckCol {
+    gap: var(--space-sm);
+  }
+}
+
+.cardContainer {
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.cardTilt {
+  width: 150px;
+  height: 288px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  transition: border-color var(--transition-fast);
+}
+
+@media (max-width: 600px) {
+  .cardTilt {
+    width: 130px;
+    height: 250px;
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.02) brightness(0.9);
+  transition: filter var(--transition-fast);
+}
+
+.cardContainer:hover .cardImage {
+  filter: contrast(1.05) brightness(1);
+}
+
+.cardContainer:hover .cardTilt {
+  border-color: var(--accent-blue);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, var(--accent-blue-glow) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.cardContainer:hover .cardGlow {
+  opacity: 1;
+}
+
+.recursoFrame {
+  margin-top: var(--space-xl);
+  display: flex;
+  justify-content: center;
+  opacity: 0.15;
+}
+
+.recursoFrame img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+/* Modal detail styling */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 4, 6, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.modalContent {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 850px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 10;
+  padding: var(--space-xs);
+  border-radius: var(--radius-full);
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color var(--transition-fast);
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalLayout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+@media (max-width: 768px) {
+  .modalLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modalVisual {
+  height: 550px;
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .modalVisual {
+    height: 350px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--space-md);
+}
+
+.modalDetails {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.modalDesc {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.modalFooter {
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-md);
+  margin-top: var(--space-sm);
+}
+.modalFooter p {
+  font-size: 0.7rem;
+  color: var(--accent-blue);
+}

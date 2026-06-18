@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=UnifrakturMaguntia&display=swap');
+
+/* Typography Utilities */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-gothic {
+  font-family: var(--font-gothic);
+}
+
+/* Base Typographic Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: var(--weight-bold);
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+/* Styled Typography Classes */
+.text-display {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.text-gothic-title {
+  font-family: var(--font-gothic);
+  font-size: clamp(3rem, 12vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.text-editorial-serif {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  line-height: 1.2;
+}
+
+.text-heading-lg {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+  letter-spacing: -0.01em;
+}
+
+.text-heading-md {
+  font-family: var(--font-sans);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.01em;
+}
+
+.text-body-clean {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: var(--weight-light);
+  color: var(--text-secondary);
+}
+
+.text-caption-mono {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: var(--weight-medium);
+  color: var(--text-muted);
+}
+
+.text-nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.text-nav-link:hover {
+  color: var(--accent-blue);
+}

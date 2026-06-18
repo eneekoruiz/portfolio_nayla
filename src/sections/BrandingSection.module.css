@@ -1,0 +1,173 @@
+.brandingSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-tertiary);
+  padding: var(--space-xxl) 0;
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.quoteBlock {
+  max-width: 800px;
+  margin-bottom: var(--space-xl);
+}
+
+.quoteSubtitle {
+  margin-top: var(--space-md);
+  color: var(--text-secondary);
+}
+
+.descriptionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .descriptionGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+.descColLeft h3 {
+  margin-bottom: var(--space-sm);
+}
+
+/* Horizontal sliding tapes styles */
+.tapesContainer {
+  margin: var(--space-xxl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+  overflow: hidden;
+}
+
+.tapeRow {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.tapeImage {
+  height: 90px;
+  width: auto;
+  object-fit: cover;
+  opacity: 0.95;
+  filter: contrast(1.02);
+}
+
+@media (max-width: 768px) {
+  .tapeImage {
+    height: 60px;
+  }
+}
+
+/* Mockup Grid cards styles with vertical offsets */
+.mockupGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xxl);
+  padding: var(--space-md) 0;
+}
+
+@media (max-width: 768px) {
+  .mockupGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.mockupCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  transition: transform var(--transition-slow);
+}
+
+.offsetDown {
+  transform: translateY(40px);
+}
+
+.offsetUp {
+  transform: translateY(-40px);
+}
+
+@media (max-width: 768px) {
+  .offsetDown, .offsetUp {
+    transform: none;
+  }
+}
+
+.mockupCard {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+  border: 1px solid var(--border-color);
+}
+
+.mockupImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cans layout styles */
+.cansSection {
+  margin-top: var(--space-xxl);
+}
+
+.cansHeader {
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-sm);
+}
+
+.cansGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+  align-items: center;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .cansGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.canContainer {
+  width: 100%;
+  max-width: 480px;
+}
+
+.canCard {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.canImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
