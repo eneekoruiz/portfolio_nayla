@@ -27,6 +27,10 @@ npm run preview
 - Framer Motion y Lenis
 - CSS Modules
 
+## Arquitectura
+
+La aplicacion Vite compone el portfolio con secciones y componentes React que consumen contenido y recursos locales. No existe backend: el build genera archivos estaticos y las animaciones se aplican en el cliente sin alterar la estructura del contenido.
+
 ## Documentacion
 
 La [documentacion en DeepWiki](https://deepwiki.com/eneekoruiz/portfolio_nayla) ofrece una vista adicional de la estructura y el codigo del proyecto.
