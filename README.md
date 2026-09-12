@@ -1,6 +1,12 @@
 # Portfolio de Nayla Aguado
 
+[![CI](https://github.com/eneekoruiz/portfolio_nayla/actions/workflows/ci.yml/badge.svg)](https://github.com/eneekoruiz/portfolio_nayla/actions/workflows/ci.yml)
+[![Live Demo](https://img.shields.io/badge/Demo-portfolio--nayla--one.vercel.app-0070f3?style=flat&logo=vercel&logoColor=white)](https://portfolio-nayla-one.vercel.app)
+
+> 🌐 **Despliegue en vivo:** [https://portfolio-nayla-one.vercel.app](https://portfolio-nayla-one.vercel.app)
+
 Portfolio visual de Nayla Aguado, centrado en ilustracion, identidad, fotografia, packaging y diseno editorial. La web organiza los proyectos en una experiencia de navegacion continua con animaciones y composiciones adaptadas a cada coleccion.
+
 
 ![Vista principal del portfolio](docs/images/portfolio.png)
 
